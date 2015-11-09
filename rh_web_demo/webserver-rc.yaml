@@ -3,13 +3,13 @@ apiVersion: "v1"
 metadata:
   name: "webserver-controller"
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     name: "webserver"
   template:
     spec:
       containers:
-        - name: "apache-frontend"
+        - name: "webserver"
           image: "webwithdb"
           ports:
             - containerPort: 80
@@ -17,5 +17,6 @@ spec:
       labels:
         name: "webserver"
         uses: db
+      selectorname: "webserver"
   labels:
     name: "webserver"
