@@ -1,0 +1,13 @@
+Kubernetes:
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: webserver
+  name: webserver-service
+  namespace: default
+spec:
+  ports:
+  - port: 80
+  selector:
+    name: webserver
