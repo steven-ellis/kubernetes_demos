@@ -10,3 +10,8 @@ Uses Docker images created via
  - Building a Simple Database Server in a Docker Container
   - https://access.redhat.com/articles/1330533
   - dbforweb
+
+## New Base Image
+Create an additional docker image based on a patched RHEL 7.x that our
+webwithdb and dbforweb images can be derived from.
+ - rhel_patched
