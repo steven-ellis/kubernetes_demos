@@ -6,6 +6,7 @@ metadata:
   name: webserver-service
   namespace: default
 spec:
+  type: LoadBalancer
   ports:
   - port: 80
   selector:
